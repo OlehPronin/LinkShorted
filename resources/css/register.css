@@ -1,0 +1,58 @@
+/* Поля формы */
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Стили при фокусе на поле ввода */
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    background-color: #333;
+}
+
+/* Кнопка Already registered? */
+.home-button {
+    color: #007bff;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.home-button:hover {
+    color: #0056b3;
+    text-shadow: 0 0 5px rgba(0, 123, 255, 0.7);
+}
+
+/* Стили для кнопки регистрации */
+.primary-button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4); /* Базовая тень */
+}
+
+.primary-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.6);
+}
+
+.primary-button:active {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}

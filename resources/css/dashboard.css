@@ -1,0 +1,56 @@
+/* Общие стили для всех кнопок */
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.6);
+}
+
+.button:active {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Для каждого цвета */
+.blue-button {
+    background-color: #007bff;
+}
+
+.green-button {
+    background-color: #007bff;
+}
+
+.red-button {
+    background-color: #007bff;
+}
+
+/* Эффект всплытия анимации */
+.button::before {
+    margin-left: 40px;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.6s ease;
+}
+
+.button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}

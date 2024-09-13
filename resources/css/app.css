@@ -1,0 +1,281 @@
+/* Основные стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Центрированный контейнер */
+.container {
+    text-align: center;
+    z-index: 1;
+    background-color: black; 
+    padding: 0; 
+    margin: 0; 
+    width: 100%; 
+}
+
+h1 {
+    
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: white; 
+}
+
+p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+/* Общие стили для кнопок */
+button, .auth-button, .contact-button, .center-button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.4s ease; /* Добавлен общий переход для всех эффектов */
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4); /* Базовая тень */
+    position: relative;
+    overflow: hidden; /* Чтобы скрыть анимацию внутри кнопки */
+}
+
+button:hover, .auth-button:hover, .contact-button:hover, .center-button:hover {
+    background-color: #0056b3; 
+    transform: translateY(-5px) scale(1.1); 
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.6);
+}
+
+/* Эффект нажатия */
+button:active, .auth-button:active, .contact-button:active, .center-button:active {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3); 
+}
+
+/* Дополнительная анимация всплытия изнутри */
+button::before, .auth-button::before, .contact-button::before, .center-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.6s ease;
+}
+
+button:hover::before, .auth-button:hover::before, .contact-button:hover::before, .center-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Логотип и кнопка Контакты слева */
+.header-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    padding-left: 100px;
+    width: 80px;
+}
+
+/* Стили для кнопки Контакты */
+.contact-button {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Кнопки Авторизация и Регистрация справа */
+.header-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.auth-button {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+.auth-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Стили для фонового изображения */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Стили для центральной кнопки */
+.center-button {
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+.center-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Общие стили для всех кнопок */
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.6);
+}
+
+.button:active {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Для каждого цвета */
+.blue-button {
+    background-color: #007bff;
+}
+
+.green-button {
+    background-color: #007bff;
+}
+
+.red-button {
+    background-color: #007bff;
+}
+
+/* Эффект всплытия анимации */
+.button::before {
+    margin-left: 40px;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.6s ease;
+}
+
+.button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+/* Поля формы */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем поля по горизонтали */
+}   
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 80%; /* Единая ширина для всех полей */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background-color: #222;
+    color: #fff;
+    max-width: 400px; /* Ограничение максимальной ширины */
+}
+form {
+    display: flex;
+    flex-direction: column; /* Поля расположены друг под другом */
+    align-items: center; /* Центрируем элементы формы */
+    width: 100%;
+}
+
+/* Стили при фокусе на поле ввода */
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    background-color: #333;
+}
+
+/* Кнопка Already registered? */
+.home-button {
+    color: #007bff;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.home-button:hover {
+    color: #0056b3;
+    text-shadow: 0 0 5px rgba(0, 123, 255, 0.7);
+}
+
+/* Стили для кнопки регистрации */
+.primary-button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4); /* Базовая тень */
+}
+
+.primary-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.6);
+}
+
+.primary-button:active {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
